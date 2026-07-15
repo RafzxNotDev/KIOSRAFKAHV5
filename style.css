@@ -1,0 +1,531 @@
+/* ===================================
+   WARUNGAN POS
+   STYLE.CSS
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    overflow:hidden;
+}
+
+/* ==========================
+   WRAPPER
+========================== */
+.wrapper{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+.sidebar{
+    width:260px;
+    background:#1e293b;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+}
+.logo{
+    padding:25px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+.logo h2{
+    font-size:24px;
+    margin-bottom:6px;
+    font-weight:700;
+}
+.logo p{
+    font-size:14px;
+    color:#cbd5e1;
+}
+.sidebar ul{
+    list-style:none;
+    padding:15px 0;
+    flex:1;
+}
+.sidebar li{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 25px;
+    cursor:pointer;
+    transition:.25s;
+    font-size:15px;
+}
+.sidebar li i{
+    width:22px;
+    text-align:center;
+    font-size:18px;
+}
+.sidebar li:hover{
+    background:#334155;
+}
+.sidebar li.active{
+    background:#2563eb;
+}
+#logoutBtn{
+    margin-top:auto;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+.content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* ==========================
+   TOPBAR
+========================== */
+.topbar{
+    height:70px;
+    background:#fff;
+    padding:0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+.topbar h3{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:3px;
+}
+.topbar small{
+    color:#666;
+}
+#userEmail{
+    background:#2563eb;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+/* ==========================
+   PAGE
+========================== */
+.page{
+    display:none;
+    padding:25px;
+    overflow:auto;
+    height:calc(100vh - 70px);
+}
+.page.active{
+    display:block;
+}
+
+/* ==========================
+   CARD
+========================== */
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+    margin-bottom:20px;
+}
+.card-header{
+    background:#fff;
+    font-weight:700;
+    border-bottom:1px solid #eee;
+    padding:18px;
+}
+.card-body{
+    padding:20px;
+}
+.card-stat{
+    transition:.25s;
+    cursor:pointer;
+}
+.card-stat:hover{
+    transform:translateY(-4px);
+}
+.card-stat h6{
+    font-size:15px;
+    color:#666;
+    margin-bottom:10px;
+}
+.card-stat h2{
+    font-size:30px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+/* ==========================
+   TABLE
+========================== */
+.table{
+    margin-bottom:0;
+}
+.table thead th{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    font-size:14px;
+    font-weight:600;
+    vertical-align:middle;
+}
+.table tbody td{
+    vertical-align:middle;
+    padding:14px 10px;
+}
+.table tbody tr:hover{
+    background:#f8f9fa;
+}
+
+/* ==========================
+   FORM
+========================== */
+label{
+    font-weight:600;
+    margin-bottom:6px;
+    display:block;
+}
+.form-control, .form-select{
+    height:45px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    box-shadow:none;
+    transition:.2s;
+}
+textarea.form-control{
+    height:auto;
+}
+.form-control:focus, .form-select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+.btn{
+    border-radius:10px;
+    font-weight:600;
+    padding:10px 18px;
+    transition:.25s;
+}
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+.btn-success{
+    border:none;
+}
+.btn-danger{
+    border:none;
+}
+.btn-warning{
+    color:#fff;
+}
+
+/* ==========================
+   MODAL
+========================== */
+.modal-content{
+    border:none;
+    border-radius:15px;
+}
+.modal-header{
+    border-bottom:1px solid #eee;
+}
+.modal-footer{
+    border-top:1px solid #eee;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+#searchProduct, #searchCashier, #searchHistory{
+    max-width:350px;
+}
+
+/* ==========================
+   BADGE
+========================== */
+.badge{
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
+}
+::-webkit-scrollbar-track{
+    background:#f1f5f9;
+}
+
+/* ==========================
+   PRODUCT CARD
+========================== */
+#productList{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+#productList .col-md-4{
+    padding:0;
+}
+#productList .card{
+    height:100%;
+    transition:.25s;
+    cursor:pointer;
+}
+#productList .card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+#productList .card-body{
+    display:flex;
+    flex-direction:column;
+}
+#productList h5{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+#productList p{
+    font-size:14px;
+    color:#666;
+    margin-bottom:10px;
+}
+#productList h4{
+    color:#2563eb;
+    font-weight:700;
+    margin-bottom:10px;
+}
+#productList small{
+    color:#888;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   KERANJANG
+========================== */
+#cartList{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-height:350px;
+    overflow-y:auto;
+    padding-right:5px;
+}
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    background:#fafafa;
+}
+.cart-item strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:3px;
+}
+.cart-item span{
+    display:inline-block;
+    min-width:30px;
+    text-align:center;
+    font-weight:700;
+}
+.cart-item button{
+    margin:0 2px;
+}
+
+/* ==========================
+   TOTAL
+========================== */
+#cartTotal{
+    font-size:24px;
+    font-weight:700;
+    color:#16a34a;
+}
+
+/* ==========================
+   KASIR
+========================== */
+#customerName, #paymentMethod{
+    margin-bottom:15px;
+}
+#payBtn{
+    height:48px;
+    font-size:16px;
+    font-weight:700;
+}
+#cancelBtn{
+    height:45px;
+}
+
+/* ==========================
+   EMPTY STATE
+========================== */
+.empty-data{
+    text-align:center;
+    padding:40px 20px;
+    color:#888;
+    font-size:15px;
+}
+
+/* ==========================
+   TRANSISI
+========================== */
+.page{
+    animation:fadePage .25s ease;
+}
+@keyframes fadePage{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* ==========================
+   RESPONSIVE TABLET
+========================== */
+@media (max-width:992px){
+    .sidebar{width:80px;}
+    .logo h2{font-size:18px;}
+    .logo p{display:none;}
+    .sidebar li span{display:none;}
+    .sidebar li{justify-content:center;padding:18px 0;}
+    .sidebar li i{font-size:20px;margin:0;}
+    .topbar{padding:0 20px;}
+}
+
+/* ==========================
+   RESPONSIVE HP
+========================== */
+@media (max-width:768px){
+    body{overflow:auto;}
+    .wrapper{flex-direction:column;height:auto;}
+    .sidebar{width:100%;height:auto;}
+    .sidebar ul{display:flex;overflow-x:auto;padding:0;}
+    .sidebar li{min-width:110px;justify-content:center;padding:15px 10px;}
+    .content{width:100%;}
+    .topbar{height:auto;padding:15px;flex-direction:column;align-items:flex-start;gap:10px;}
+    .page{height:auto;padding:15px;}
+    .card{margin-bottom:15px;}
+    .card-stat h2{font-size:22px;}
+    .table{font-size:13px;}
+    .table th, .table td{white-space:nowrap;}
+    #searchProduct, #searchCashier, #searchHistory{max-width:100%;}
+    #cartTotal{font-size:20px;}
+}
+
+/* ==========================
+   UTILITY
+========================== */
+.text-right{text-align:right;}
+.text-center{text-align:center;}
+.d-none{display:none;}
+.w-100{width:100%;}
+.mt-2{margin-top:10px;}
+.mt-3{margin-top:15px;}
+.mb-2{margin-bottom:10px;}
+.mb-3{margin-bottom:15px;}
+
+/* ==========================
+   STATUS STOK
+========================== */
+.stock-good{background:#dcfce7;color:#166534;padding:6px 10px;border-radius:20px;font-size:12px;}
+.stock-low{background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:20px;font-size:12px;}
+.stock-empty{background:#fee2e2;color:#991b1b;padding:6px 10px;border-radius:20px;font-size:12px;}
+
+/* ==========================
+   FOCUS
+========================== */
+button:focus, input:focus, select:focus, textarea:focus{outline:none;}
+#reader{width:100%;max-width:450px;margin-bottom:15px;display:none;}
+
+/* ==========================
+   STRUK DIGITAL & PRINT
+========================== */
+.receipt-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff;
+    color: #000;
+}
+
+.receipt-divider {
+    border-top: 1px dashed #000;
+    margin: 10px 0;
+}
+
+/* Pengaturan Saat Disimpan ke PDF / Diprint */
+@media print {
+    body * {
+        visibility: hidden; /* Sembunyikan semua elemen web */
+    }
+    #receiptArea, #receiptArea * {
+        visibility: visible; /* Hanya tampilkan area struk */
+    }
+    #receiptArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 300px; /* Ukuran kertas struk */
+        padding: 0 !important;
+    }
+}
+/* ==========================
+   KASIR COMPACT GRID
+========================== */
+.product-card {
+    transition: all 0.2s ease-in-out;
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb !important;
+    box-shadow: 0 6px 15px rgba(37,99,235,0.1) !important;
+}
+
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Kustomisasi Scrollbar Keranjang */
+#cartList::-webkit-scrollbar {
+    width: 6px;
+}
+#cartList::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
